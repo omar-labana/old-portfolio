@@ -41,11 +41,7 @@
               <li class="mr-2 bg-indigo-200 px-2 py-1 my-1 rounded">p5.js</li>
             </ul>
           </div>
-          <button
-            class="px-2 py-1 mt-2 border-2 border-blue-900 rounded-md text-blue-900 font-semibold"
-          >
-            See Project
-          </button>
+          <ProjectModal />
         </div>
       </div>
     </div>
@@ -53,6 +49,12 @@
 </template>
 
 <script>
+import ProjectModal from "./ProjectModal.vue";
+
 const projects = [];
-export default {};
+export default {
+  components:{
+    ProjectModal
+  }
+};
 </script>
