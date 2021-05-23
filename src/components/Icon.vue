@@ -1,6 +1,6 @@
 <template>
   <svg
-    v-if="name === 'javascript'"
+    v-if="name === 'JavaScript'"
     role="img"
     viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
