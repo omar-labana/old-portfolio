@@ -1,6 +1,6 @@
 <template>
-  <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
-    <div>
+  <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 md:flex">
+    <div class="md:w-1/2">
       <h2 class="text-4xl font-bold">
         About
         <br />
@@ -86,7 +86,7 @@
     </div>
 
     <!-- Disclosures -->
-    <div class="flex flex-col mt-5">
+    <div class="flex flex-col mt-5 md:mt-0 md:px-3 md:w-1/2">
       <Disclosure v-slot="{ open }">
         <DisclosureButton class="flex items-center justify-between w-full">
           <span class="text-2xl font-medium">Languages</span>
@@ -104,8 +104,11 @@
           leave-to-class="transform scale-95 opacity-0"
         >
           <DisclosurePanel>
-            <ul>
-              <li>JavaScript</li>
+            <ul class="mt-3">
+              <li class="flex items-center gap-3">
+                <Icon class="w-12" name="JavaScript"></Icon>
+                JavaScript
+              </li>
             </ul>
           </DisclosurePanel>
         </transition>
