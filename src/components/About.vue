@@ -1,5 +1,5 @@
 <template>
-  <div class="md:flex">
+  <div class="md:flex" id="about">
     <div class="md:w-1/2">
       <h2 class="text-4xl font-bold">
         About
