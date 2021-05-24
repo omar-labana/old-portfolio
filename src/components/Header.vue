@@ -1,6 +1,6 @@
 <template>
-  <nav>
-    <div class="flex items-center justify-between h-16">
+  <nav class="fixed top-0 left-0 right-0  bg-white border-b">
+    <div class="flex items-center justify-between h-16 layout">
       <div class="flex items-center">
         <CodeIcon class="w-7 mr-2" />
         <div class="font-black text-xl text-pink-800 ml-1 md:ml-0">OL</div>
@@ -25,7 +25,7 @@
           <XIcon v-else class="w-7 h-7" />
         </DisclosureButton>
         <DisclosurePanel
-          class="sm:hidden bg-blue-900 w-full h-full absolute top-0 left-0 opacity-95"
+          class="sm:hidden bg-blue-900 w-screen h-screen absolute top-0 left-0 opacity-95"
         >
           <div class="px-2 mt-16 pb-3 space-y-1">
             <a

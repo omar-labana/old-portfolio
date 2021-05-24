@@ -2,9 +2,10 @@
   <div class="layout">
     <Header />
     <Hero />
-    <Projects />
-    <About />
-    <Contact />
+    <h1 class="h-screen">Dummy</h1>
+    <!-- <Projects /> -->
+    <!-- <About /> -->
+    <!-- <Contact /> -->
   </div>
 </template>
 
@@ -12,8 +13,8 @@
 import Header from "./components/Header.vue";
 import Hero from "./components/Hero.vue";
 import Projects from "./components/Projects.vue";
-import About from "./components/About.vue";
-import Contact from "./components/Contact.vue";
+// import About from "./components/About.vue";
+// import Contact from "./components/Contact.vue";
 </script>
 
 <style >

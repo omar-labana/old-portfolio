@@ -1,5 +1,7 @@
 <template>
-  <section class="lg:px-40 text-gray-700 my-10 md:my-32">
+  <section
+    class="lg:px-40 text-gray-700 flex flex-col justify-center min-hero-height"
+  >
     <h1 class="text-5xl font-bold">
       Hey there, I'm Omar <br />
       Glad to see you!
@@ -78,3 +80,9 @@
 <script>
 export default {};
 </script>
+
+<style>
+.min-hero-height {
+  min-height: 100vh;
+}
+</style>
