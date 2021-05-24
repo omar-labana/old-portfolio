@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 md:flex">
+  <div class="md:flex">
     <div class="md:w-1/2">
       <h2 class="text-4xl font-bold">
         About

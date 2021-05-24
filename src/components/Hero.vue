@@ -1,5 +1,5 @@
 <template>
-  <section class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-40 text-gray-700 my-10 md:my-32">
+  <section class="lg:px-40 text-gray-700 my-10 md:my-32">
     <h1 class="text-5xl font-bold">
       Hey there, I'm Omar <br />
       Glad to see you!
