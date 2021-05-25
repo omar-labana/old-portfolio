@@ -1,5 +1,5 @@
 <template>
-<span id="about" class="anchor"></span>
+  <span id="about" class="anchor"></span>
   <div class="md:flex">
     <div class="md:w-1/2">
       <h2 class="text-4xl font-bold">
@@ -88,9 +88,14 @@
 
     <!-- Disclosures -->
     <div class="flex flex-col mt-5 md:mt-0 md:px-3 md:w-1/2">
-      <Disclosure v-slot="{ open }">
+      <Disclosure
+        v-slot="{ open }"
+        v-for="skill in skills"
+        :key="skill"
+        :defaultOpen="skill.id === 0 ? true : false"
+      >
         <DisclosureButton class="flex items-center justify-between w-full">
-          <span class="text-2xl font-medium">Languages</span>
+          <span class="text-2xl font-medium">{{ skill.name }}</span>
           <ChevronRightIcon
             :class="open ? 'transform rotate-90' : ''"
             class="w-9 h-9"
@@ -106,9 +111,13 @@
         >
           <DisclosurePanel>
             <ul class="mt-3">
-              <li class="flex items-center gap-3">
-                <Icon class="w-12" name="JavaScript"></Icon>
-                JavaScript
+              <li
+                class="flex items-center gap-3 my-4"
+                v-for="element in skill.data"
+                :key="element"
+              >
+                <Icon class="w-12" :name="element"></Icon>
+                {{ element }}
               </li>
             </ul>
           </DisclosurePanel>
@@ -121,6 +130,43 @@
 <script>
 import { ExternalLinkIcon, ChevronRightIcon } from "@heroicons/vue/solid";
 import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/vue";
+const skills = {
+  langs: {
+    id: 0,
+    name: "Languages",
+    data: [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "TypeScript",
+      "Ruby",
+      "Rust",
+      "Python",
+      "AutoIt",
+      "AHK",
+    ],
+  },
+  frames: {
+    id: 1,
+    name: "Frameworks",
+    data: [
+      "Node.js",
+      "Express.js",
+      "P5.js",
+      "Socket.io",
+      "Ruby on Rails",
+      "Vue.js",
+      "React.js",
+      "Tailwind CSS",
+    ],
+  },
+  tools: {
+    id: 2,
+    name: "Tools",
+    data: ["Git", "VSCode", "Windows Terminal", "Firebase"],
+  },
+};
+const isOpen = true;
 export default {
   components: {
     ExternalLinkIcon,
@@ -128,6 +174,12 @@ export default {
     DisclosureButton,
     DisclosurePanel,
     ChevronRightIcon,
+  },
+  setup() {
+    return {
+      skills,
+      isOpen,
+    };
   },
 };
 </script>
