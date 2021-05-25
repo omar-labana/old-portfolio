@@ -1,6 +1,6 @@
 <template>
   <section>
-    <h2 class="text-4xl font-semibold">Projects</h2>
+    <h2 class="text-4xl font-bold">Projects</h2>
     <!-- Cards -->
     <div class="flex flex-col justify-items-center items-center">
       <Project
