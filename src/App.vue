@@ -3,7 +3,9 @@
     <Header />
     <Hero />
     <Projects />
+    <div class="h-24"></div>
     <About />
+    <div class="h-24"></div>
     <Contact />
   </div>
 </template>
@@ -19,5 +21,9 @@ import Contact from "./components/Contact.vue";
 <style >
 .layout {
   @apply max-w-7xl font-main mx-auto px-2 sm:px-6 lg:px-8;
+}
+.anchor {
+  position: absolute;
+  transform: translateY(-100px);
 }
 </style>

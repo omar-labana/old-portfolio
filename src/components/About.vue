@@ -1,5 +1,6 @@
 <template>
-  <div class="md:flex" id="about">
+<span id="about" class="anchor"></span>
+  <div class="md:flex">
     <div class="md:w-1/2">
       <h2 class="text-4xl font-bold">
         About

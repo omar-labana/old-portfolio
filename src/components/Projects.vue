@@ -1,4 +1,5 @@
 <template>
+  <span id="projects" class="anchor"></span>
   <section id="projects">
     <h2 class="text-4xl font-bold">Projects</h2>
     <!-- Cards -->

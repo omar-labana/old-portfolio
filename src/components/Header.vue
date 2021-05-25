@@ -53,9 +53,10 @@ import { CodeIcon, MenuIcon, XIcon } from "@heroicons/vue/solid";
 import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/vue";
 
 const navigation = [
-  { name: "About", href: "#about", current: true },
-  { name: "Projects", href: "#projects", current: false },
-  { name: "Contact", href: "#contact", current: false },
+  { name: "Home", href: "#home" },
+  { name: "Projects", href: "#projects" },
+  { name: "About", href: "#about" },
+  { name: "Contact", href: "#contact" },
 ];
 
 export default {
