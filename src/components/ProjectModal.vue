@@ -21,7 +21,7 @@
             leave-from="opacity-100"
             leave-to="opacity-0"
           >
-            <DialogOverlay class="fixed inset-0 bg-blue-900 opacity-90" />
+            <DialogOverlay class="fixed inset-0 bg-blue-900" />
           </TransitionChild>
 
           <span class="inline-block h-screen align-middle" aria-hidden="true">
@@ -33,7 +33,7 @@
             enter="duration-300 ease-out"
             enter-from="opacity-0 scale-95"
             enter-to="opacity-100 scale-100"
-            leave="duration-200 ease-in"
+            leave="duration-100 ease-in"
             leave-from="opacity-100 scale-100"
             leave-to="opacity-0 scale-95"
           >
@@ -82,9 +82,10 @@
                       <li
                         v-for="lang in modalData.builtWith"
                         :key="lang"
-                        class="mr-2 bg-indigo-200 px-2 py-1 my-1 rounded"
+                        class=" m-2 flex flex-col items-center font-medium"
                       >
-                        {{ lang }}
+                        <Icon :name="lang" class="w-10"></Icon>
+                        <span>{{ lang }}</span>
                       </li>
                     </ul>
                     <hr class="my-2" />

@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section id="projects">
     <h2 class="text-4xl font-bold">Projects</h2>
     <!-- Cards -->
     <div class="flex flex-col justify-items-center items-center">
@@ -18,6 +18,7 @@ import Project from "./Project.vue";
 
 const projects = [
   {
+    id: 1,
     name: "100H Sketch",
     URLs: {
       img:
@@ -32,11 +33,20 @@ const projects = [
     },
     miniDescription:
       "Shared sketch between players, one player can draw while others guess the drawing.",
-    builtWith: ["HTML5", "CSS3", "P5.js", "Node.js", "Express.js", "Socket.io"],
+    builtWith: [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "P5.js",
+      "Node.js",
+      "Express.js",
+      "Socket.io",
+    ],
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!",
   },
   {
+    id: 2,
     name: "100H Lamo",
     URLs: {
       img:

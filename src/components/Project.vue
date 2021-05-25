@@ -5,6 +5,7 @@
     <!-- Image -->
     <div
       class="px-5 py-7 rounded-xl bg-indigo-400 md:w-1/2 md:mx-1 md:p-0 md:py-20 md:px-6 md:self-center"
+      :class="projectData.id % 2 === 0? 'order-2' : ''"
     >
       <img :src="projectData.URLs.img" alt="" />
     </div>
@@ -24,15 +25,17 @@
         <p class="text-base md:text-lg">
           {{ projectData.miniDescription }}
         </p>
+        <h4 class="font-semibold text-lg">Built with:</h4>
         <ul
           class="flex flex-wrap text-indigo-900 items-center text-sm md:text-base"
         >
           <li
             v-for="lang in projectData.builtWith"
             :key="lang"
-            class="mr-2 bg-indigo-200 px-2 py-1 my-1 rounded"
+            class="m-2 flex flex-col items-center text-sm"
           >
-            {{ lang }}
+            <Icon :name="lang" class="w-7"></Icon>
+            <span>{{ lang }}</span>
           </li>
         </ul>
       </div>
