@@ -24,8 +24,8 @@ const projects = [
     URLs: {
       img:
         "https://firebasestorage.googleapis.com/v0/b/portfolio-98d5b.appspot.com/o/100H.png?alt=media&token=51d670be-292b-43e7-ae28-5ec48ae15daa",
-      liveVersion: "#",
-      sourceCode: "#",
+      liveVersion: "http://this-is-100-hostage.herokuapp.com/",
+      sourceCode: "https://github.com/omar-labana/100H-proto-1",
     },
     tags: {
       projectType: "Personal",

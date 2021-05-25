@@ -90,7 +90,7 @@
                     </ul>
                     <hr class="my-2" />
                     <div class="flex justify-around">
-                      <a :href="modalData.URLs.liveVersion">
+                      <a :href="modalData.URLs.liveVersion" target="_blank">
                         <button
                           class="px-2 py-1 mt-2 border-2 border-blue-900 rounded-md text-blue-900 font-semibold flex justify-around items-center"
                           type="button"
@@ -99,7 +99,7 @@
                           <ExternalLinkIcon class="w-7 h-7" />
                         </button>
                       </a>
-                      <a :href="modalData.URLs.sourceCode">
+                      <a :href="modalData.URLs.sourceCode" target="_blank">
                         <button
                           class="px-2 py-1 mt-2 border-2 border-blue-900 rounded-md text-blue-900 font-semibold flex justify-around items-center"
                           type="button"
