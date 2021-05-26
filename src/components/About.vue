@@ -94,7 +94,7 @@
         :key="skill"
         :defaultOpen="skill.id === 0 ? true : false"
       >
-        <DisclosureButton class="flex items-center justify-between w-full">
+        <DisclosureButton class="flex items-center justify-between w-full md:my-4">
           <span class="text-2xl font-medium">{{ skill.name }}</span>
           <ChevronRightIcon
             :class="open ? 'transform rotate-90' : ''"

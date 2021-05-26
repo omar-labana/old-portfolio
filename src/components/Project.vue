@@ -34,7 +34,7 @@
             :key="lang"
             class="m-2 flex flex-col items-center text-sm"
           >
-            <Icon :name="lang" class="w-7"></Icon>
+            <Icon :name="lang" class="w-7 h-7"></Icon>
             <span>{{ lang }}</span>
           </li>
         </ul>

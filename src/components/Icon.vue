@@ -256,7 +256,18 @@
         fill="url(#IconifyId-179a2abc460-d3b620-3)"
       />
     </svg>
-
+    <svg
+      v-if="name === 'Vuetify'"
+      fill="#1867C0"
+      role="img"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title>Vuetify icon</title>
+      <path
+        d="M7.094 0L12 11.596 16.906 0H7.094zM1.5 3.5L12 24 22.5 3.5H17L12 15 7 3.5z"
+      />
+    </svg>
     <!-- Tools Icons -->
     <svg
       v-if="name === 'Git'"

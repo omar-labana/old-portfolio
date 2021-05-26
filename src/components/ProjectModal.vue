@@ -76,15 +76,17 @@
                     {{ modalData.description }}
                   </p>
                   <div class="md:w-2/5">
+                    <h4 class="font-semibold text-lg">Built with:</h4>
+
                     <ul
                       class="flex flex-wrap text-indigo-900 items-center text-sm md:text-base"
                     >
                       <li
                         v-for="lang in modalData.builtWith"
                         :key="lang"
-                        class=" m-2 flex flex-col items-center font-medium"
+                        class="m-2 flex flex-col items-center font-medium"
                       >
-                        <Icon :name="lang" class="w-10"></Icon>
+                        <Icon :name="lang" class="w-10 h-10"></Icon>
                         <span>{{ lang }}</span>
                       </li>
                     </ul>
@@ -92,8 +94,14 @@
                     <div class="flex justify-around">
                       <a :href="modalData.URLs.liveVersion" target="_blank">
                         <button
-                          class="px-2 py-1 mt-2 border-2 border-blue-900 rounded-md text-blue-900 font-semibold flex justify-around items-center"
+                          class="px-2 py-1 mt-2 border-2 rounded-md font-semibold flex justify-around items-center disabled:text-red-900"
                           type="button"
+                          :disabled="modalData.URLs.liveVersion === '#'"
+                          :class="
+                            modalData.URLs.liveVersion != '#'
+                              ? 'border-blue-900 text-blue-900'
+                              : 'border-gray-200 text-gray-200'
+                          "
                         >
                           See Live
                           <ExternalLinkIcon class="w-7 h-7" />
