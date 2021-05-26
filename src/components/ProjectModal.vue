@@ -9,7 +9,7 @@
   <TransitionRoot appear :show="isOpen" as="template">
     <Dialog as="div" @close="closeModal" :open="isOpen">
       <div
-        class="fixed inset-0 z-10 overflow-y-auto md:max-w-screen-md lg:max-w-screen-lg md:mx-auto "
+        class="fixed inset-0 z-10 overflow-y-auto md:max-w-screen-md lg:max-w-screen-lg md:mx-auto"
       >
         <div class="min-h-screen px-4 text-center">
           <TransitionChild
@@ -21,7 +21,7 @@
             leave-from="opacity-100"
             leave-to="opacity-0"
           >
-            <DialogOverlay class="fixed inset-0 bg-blue-900 opacity-90" />
+            <DialogOverlay class="fixed inset-0 bg-blue-900" />
           </TransitionChild>
 
           <span class="inline-block h-screen align-middle" aria-hidden="true">
@@ -33,7 +33,7 @@
             enter="duration-300 ease-out"
             enter-from="opacity-0 scale-95"
             enter-to="opacity-100 scale-100"
-            leave="duration-200 ease-in"
+            leave="duration-100 ease-in"
             leave-from="opacity-100 scale-100"
             leave-to="opacity-0 scale-95"
           >
@@ -44,7 +44,7 @@
                 <div>
                   <div class="flex justify-between items-start">
                     <h3 class="text-3xl md:text-4xl font-bold mb-2">
-                      100H Sketch
+                      {{ modalData.name }}
                     </h3>
                     <button @click="closeModal" class="flex-shrink">
                       <XIcon class="w-7 h-7"></XIcon>
@@ -53,11 +53,13 @@
                   <ul
                     class="flex font-semibold text-gray-500 mb-1 text-base md:text-lg"
                   >
-                    <li class="mr-3 text-gray-800">Personal</li>
+                    <li class="mr-3 text-gray-800">
+                      {{ modalData.tags.projectType }}
+                    </li>
                     <li class="mr-2">•</li>
-                    <li class="mr-3">Full Stack</li>
+                    <li class="mr-3">{{ modalData.tags.projectDev }}</li>
                     <li class="mr-2">•</li>
-                    <li>2020</li>
+                    <li>{{ modalData.tags.projectDate }}</li>
                   </ul>
                 </div>
               </DialogTitle>
@@ -66,52 +68,46 @@
                 <div
                   class="px-5 py-7 rounded-xl bg-indigo-400 md:mx-1 md:p-0 md:py-20 md:px-6 md:self-center"
                 >
-                  <img src="../assets/100H.png" alt="" />
+                  <img :src="modalData.URLs.img" alt="" />
                 </div>
                 <!-- Descreption -->
                 <div class="md:flex md:mx-1 md:my-4">
-                  <p class="my-3 md:my-0 md:w-3/5 md:mr-10 ">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Quaerat dolores quasi nostrum, possimus voluptatum obcaecati
-                    ab expedita, ipsam rem voluptatem exercitationem velit sunt,
-                    facilis perspiciatis molestiae animi praesentium tempore
-                    autem quibusdam! In molestiae exercitationem nam, dolores
-                    ratione, molestias eligendi delectus quo velit non, maxime
-                    iure at aperiam omnis natus facilis architecto sunt deserunt
-                    rem. Eum ad sed corporis quo deserunt?
+                  <p class="my-3 md:my-0 md:w-3/5 md:mr-10">
+                    {{ modalData.description }}
                   </p>
                   <div class="md:w-2/5">
+                    <h4 class="font-semibold text-lg">Built with:</h4>
+
                     <ul
                       class="flex flex-wrap text-indigo-900 items-center text-sm md:text-base"
                     >
-                      <li class="mr-2 bg-indigo-200 px-2 py-1 my-1 rounded">
-                        HTML5/CSS3
-                      </li>
-                      <li class="mr-2 bg-indigo-200 px-2 py-1 my-1 rounded">
-                        Node.js
-                      </li>
-                      <li class="mr-2 bg-indigo-200 px-2 py-1 my-1 rounded">
-                        Express.js
-                      </li>
-                      <li class="mr-2 bg-indigo-200 px-2 py-1 my-1 rounded">
-                        Socket.io
-                      </li>
-                      <li class="mr-2 bg-indigo-200 px-2 py-1 my-1 rounded">
-                        p5.js
+                      <li
+                        v-for="lang in modalData.builtWith"
+                        :key="lang"
+                        class="m-2 flex flex-col items-center font-medium"
+                      >
+                        <Icon :name="lang" class="w-10 h-10"></Icon>
+                        <span>{{ lang }}</span>
                       </li>
                     </ul>
                     <hr class="my-2" />
                     <div class="flex justify-around">
-                      <a href="#">
+                      <a :href="modalData.URLs.liveVersion" target="_blank">
                         <button
-                          class="px-2 py-1 mt-2 border-2 border-blue-900 rounded-md text-blue-900 font-semibold flex justify-around items-center"
+                          class="px-2 py-1 mt-2 border-2 rounded-md font-semibold flex justify-around items-center disabled:text-red-900"
                           type="button"
+                          :disabled="modalData.URLs.liveVersion === '#'"
+                          :class="
+                            modalData.URLs.liveVersion != '#'
+                              ? 'border-blue-900 text-blue-900'
+                              : 'border-gray-200 text-gray-200'
+                          "
                         >
                           See Live
                           <ExternalLinkIcon class="w-7 h-7" />
                         </button>
                       </a>
-                      <a href="#">
+                      <a :href="modalData.URLs.sourceCode" target="_blank">
                         <button
                           class="px-2 py-1 mt-2 border-2 border-blue-900 rounded-md text-blue-900 font-semibold flex justify-around items-center"
                           type="button"
@@ -168,6 +164,7 @@ export default {
     XIcon,
     ExternalLinkIcon,
   },
+  props: ["modalData"],
   setup() {
     let isOpen = ref(false);
 
