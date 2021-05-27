@@ -112,11 +112,13 @@ To get a local copy up and running follow these simple example steps.
 
 See the [open issues](https://github.com/omar-labana/portfolio/issues) for a list of proposed features (and known issues).
 
+- [WIP] Add missing contact form email action
 - TypeScript
 - Dark Mode Theme
 - Firebase to serve JSON instead of a static array
 - Animated Background
 - Add blog links and blogpost cards
+
 
 <!-- CONTRIBUTING -->
 
