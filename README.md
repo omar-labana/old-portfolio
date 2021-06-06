@@ -8,7 +8,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
+  <a href="https://omardev.me/">
     <img src="public/favicon.svg" alt="Logo" width="80" height="80">
   </a>
 
