@@ -18,7 +18,7 @@ import About from "./components/About.vue";
 import Contact from "./components/Contact.vue";
 </script>
 
-<style >
+<style>
 .layout {
   @apply max-w-7xl font-main mx-auto px-2 sm:px-6 lg:px-8;
 }
