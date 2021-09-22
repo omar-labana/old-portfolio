@@ -14,7 +14,7 @@
       <h3 class="text-3xl md:text-4xl font-bold my-2">
         {{ projectData.name }}
       </h3>
-      <ul class="flex font-semibold text-gray-500 mb-1 text-base md:text-lg">
+      <ul class="flex font-semibold text-gray-600 mb-1 text-base md:text-lg">
         <li class="mr-2 text-gray-800">{{ projectData.tags.projectType }}</li>
         <li class="mr-2">•</li>
         <li class="mr-3">{{ projectData.tags.projectDev }}</li>

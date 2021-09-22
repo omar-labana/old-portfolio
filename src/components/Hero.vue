@@ -15,7 +15,7 @@
     <div class="font-medium text-blue-700">LET'S CONNECT</div>
     <ul class="flex my-2">
       <li class="mr-2">
-        <a href="https://github.com/omar-labana">
+        <a href="https://github.com/omar-labana" target=”_blank”>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="22"
@@ -35,7 +35,7 @@
         </a>
       </li>
       <li class="mx-2">
-        <a href="https://www.linkedin.com/in/omar-labana/">
+        <a href="https://www.linkedin.com/in/omar-labana/" target=”_blank”>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="22"
@@ -55,7 +55,7 @@
         </a>
       </li>
       <li class="mx-2">
-        <a href="#">
+        <a href="https://twitter.com/dev_ramo" target=”_blank”>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="22"
