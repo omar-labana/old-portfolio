@@ -19,6 +19,29 @@ import Project from "./Project.vue";
 
 const projects = [
   {
+    id: 0,
+    name: "Lambo",
+    URLs: {
+      img:
+        "https://github.com/omar-labana/lambo/raw/dev/docs/img-2.png",
+      liveVersion: "https://lambo-res.herokuapp.com/",
+      sourceCode: "https://github.com/omar-labana/lambo",
+    },
+    tags: {
+      projectType: "Personal",
+      projectDev: "Full Stack",
+      projectDate: "2021",
+    },
+    miniDescription:
+      "Searchable catalog of my favorite meals.",
+    builtWith: [
+      "React.js",
+      "Axios",
+    ],
+    description:
+      "Recipies of my favorite categories of food. You can filter through Chicken, Pasta, and Seafood dishes. You navigate to a certain dish to know about the ingredients and how to prepare it.",
+  },
+  {
     id: 1,
     name: "100H Sketch",
     URLs: {
